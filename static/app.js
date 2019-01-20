@@ -34,15 +34,26 @@ const  Header = (props) => {
     );
 };
 
-const Counter = (props) => {
-    return (
+class Counter extends React.Component {
+
+    state = {
+        score: 0
+    };
+
+
+
+    render() {
+        return (
         <div className="counter">
             <button className="counter-action decrement">-</button>
-            <span className="counter-score">{ props.score }</span>
+            {/*This prefer to component instance (Counter)*/}
+            <span className="counter-score">{ this.state.score }</span>
             <button className="counter-action increment">+</button>
         </div>
     );
-};
+    }
+}
+
 
 const Player = (props) => {
     return (
@@ -50,7 +61,7 @@ const Player = (props) => {
             <span className="player-name">
                 { props.name }
             </span>
-            <Counter score={props.score}/>
+            <Counter/>
         </div>
     );
 };
