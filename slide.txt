@@ -1,0 +1,1 @@
+JSX: a syntax extension to JavaScript that is used with React to describe elements in the UI
